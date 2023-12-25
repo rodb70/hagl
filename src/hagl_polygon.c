@@ -127,9 +127,9 @@ hagl_fill_polygon(void const *_surface, int16_t amount, int16_t *vertices, hagl_
         }
 
         /* Draw lines between nodes. */
-        for (int16_t i = 0; i < count; i += 2) {
-            int16_t width = nodes[i + 1] - nodes[i];
-            hagl_draw_hline(surface, nodes[i], y, width, color);
+        for (int16_t c = 0; c < count; c += 2) {
+            int16_t width = nodes[c + 1] - nodes[c];
+            hagl_draw_hline(surface, nodes[c], y, width, color);
         }
     }
 }

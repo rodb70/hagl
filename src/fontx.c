@@ -88,7 +88,7 @@ fontx_glyph(fontx_glyph_t *glyph, wchar_t code, const uint8_t *font)
             eb = block_table[2] + block_table[3] * 0x100;
 
             /* Check if in the code block_table. */
-            if (code >= sb && code <= eb) {
+            if ((uint32_t)code >= sb && (uint32_t)code <= eb) {
                 /* Number of codes from top of the block_table. */
                 nc += code - sb;
                 // *INDENT-OFF*
